@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành Tặng Bạn, Cả Một Vườn Thương - 20/10</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Dancing+Script:wght@600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelPink: '#FCE4EC',
+                        softBlue: '#E0F7FA',
+                        warmPeach: '#FFE0B2',
+                        roseGold: '#D81B60'
+                    },
+                    fontFamily: {
+                        poetic: ['"Caveat"', '"Dancing Script"', 'cursive'],
+                        serifTitle: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            color-scheme: light;
+            --rose: #a83d5b;
+            --rose-dark: #71263f;
+            --rose-soft: #f8e8ec;
+            --ink: #473b3e;
+        }
+
+        body {
+            background:
+                radial-gradient(ellipse at 12% 12%, rgba(255, 255, 255, 0.9), transparent 32rem),
+                radial-gradient(ellipse at 90% 32%, rgba(250, 221, 227, 0.58), transparent 30rem),
+                linear-gradient(180deg, #f5f4ef 0%, #fbf7f1 50%, #f6e9e8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--ink);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.92);
+            box-shadow: 0 18px 48px rgba(91, 53, 61, 0.09), inset 0 1px rgba(255, 255, 255, 0.9);
+        }
+
+        header {
+            position: relative !important;
+            inset: auto !important;
+            z-index: 50;
+            width: min(100% - 2rem, 72rem);
+            margin-inline: auto;
+            padding-top: 1rem;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        header button {
+            border-color: rgba(168, 61, 91, 0.14) !important;
+            box-shadow: 0 5px 18px rgba(91, 53, 61, 0.08) !important;
+            transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+        }
+
+        header button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 9px 22px rgba(91, 53, 61, 0.13) !important;
+        }
+
+        .top-greeting {
+            position: relative !important;
+            inset: auto !important;
+            width: min(100% - 2rem, 72rem);
+            margin: 1rem auto 0;
+            text-align: center;
+        }
+
+        .top-greeting p {
+            font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+            line-height: 1.15;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-copy {
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-copy > span {
+            background: rgba(255, 255, 255, 0.72);
+            border-color: rgba(168, 61, 91, 0.15);
+            letter-spacing: 0.025em;
+        }
+
+        .hero-copy h1 {
+            max-width: 900px;
+            margin-inline: auto;
+            color: var(--rose-dark);
+            font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+            line-height: 1.08;
+            text-wrap: balance;
+        }
+
+        .hero-copy > p {
+            margin-top: 1rem;
+            color: #71666a;
+            font-weight: 400;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 20px 55px rgba(91, 53, 61, 0.1);
+            transition: transform 240ms ease, box-shadow 240ms ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 26px 64px rgba(91, 53, 61, 0.15);
+        }
+
+        .flower-wreath-frame {
+            padding: 7px;
+            background: linear-gradient(145deg, #e69b9b, #f3d39c 48%, #9fc5ad);
+            box-shadow: 0 12px 30px rgba(137, 79, 83, 0.2);
+        }
+
+        .flower-wreath-frame > div {
+            border-width: 5px;
+            border-color: rgba(255, 255, 255, 0.96);
+        }
+
+        .wish-panel {
+            background: rgba(255, 255, 255, 0.76);
+            box-shadow: inset 0 1px rgba(255, 255, 255, 0.95);
+        }
+
+        .wish-panel p {
+            color: #63585c;
+            font-size: 0.9rem;
+            line-height: 1.85;
+        }
+
+        .bottom-greeting {
+            position: relative !important;
+            inset: auto !important;
+            transform: none !important;
+            z-index: 20;
+            width: min(100% - 2rem, 72rem);
+            margin: 0 auto;
+            padding: 0.5rem 1rem 9rem;
+            text-align: center;
+        }
+
+        .bottom-greeting p {
+            display: inline-block;
+            padding: 0.4rem 1.1rem;
+            border: 1px solid rgba(168, 61, 91, 0.08);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(10px);
+            font-size: clamp(1.45rem, 3vw, 2.4rem);
+            line-height: 1.2;
+        }
+
+        .page-footer {
+            position: relative;
+            z-index: 20;
+            width: min(100% - 2rem, 56rem);
+            margin: 1rem auto 0;
+            padding: 0 1rem 8rem;
+            text-align: center;
+        }
+
+        .footer-note {
+            padding: clamp(1.5rem, 4vw, 2.75rem);
+            border: 1px solid rgba(255, 255, 255, 0.92);
+            border-radius: 1.75rem;
+            background: rgba(255, 255, 255, 0.82);
+            box-shadow: 0 18px 48px rgba(91, 53, 61, 0.1), inset 0 1px rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .footer-note p {
+            max-width: 42rem;
+            margin-inline: auto;
+            color: #63585c;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.85;
+        }
+
+        .footer-signature {
+            color: var(--rose);
+        }
+
+        .garden-meadow {
+            height: 11rem !important;
+            opacity: 0.68;
+            z-index: 40 !important;
+        }
+
+        button:focus-visible,
+        [contenteditable="true"]:focus-visible,
+        input:focus-visible + label {
+            outline: 3px solid rgba(168, 61, 91, 0.55);
+            outline-offset: 4px;
+        }
+
+        [contenteditable="true"]:hover {
+            outline-color: rgba(168, 61, 91, 0.55);
+        }
+
+        [contenteditable="true"]:focus {
+            outline-color: var(--rose);
+        }
+
+        @media (max-width: 640px) {
+            header {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            header button {
+                padding: 0.55rem 0.85rem !important;
+            }
+
+            .top-greeting {
+                margin-top: 1.25rem;
+            }
+
+            .hero-copy {
+                margin-bottom: 1.5rem;
+            }
+
+            .profile-card {
+                padding: 1.25rem !important;
+            }
+
+            .bottom-greeting {
+                padding-bottom: 7rem;
+            }
+
+            .page-footer {
+                padding-bottom: 6rem;
+            }
+
+            .garden-meadow {
+                height: 8rem !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .flower-wreath-frame {
+            position: relative;
+            padding: 7px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e69b9b, #f3d39c 48%, #9fc5ad);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+            box-shadow: 0 12px 30px rgba(137, 79, 83, 0.2);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Gentle Swaying for Stems */
+        .sway-flower {
+            transform-origin: bottom center;
+            animation: sway 6s ease-in-out infinite alternate;
+        }
+        .sway-flower-delay {
+            transform-origin: bottom center;
+            animation: sway 7s ease-in-out 1s infinite alternate;
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(-2deg); }
+            100% { transform: rotate(2deg); }
+        }
+
+        .poetic-heading {
+            font-family: 'Caveat', 'Dancing Script', cursive;
+            color: var(--rose);
+            text-shadow: 0 2px 16px rgba(255, 255, 255, 0.9);
+        }
+
+        /* Content Editable Styling */
+        [contenteditable="true"]:hover {
+            outline: 2px dashed #ec407a;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        [contenteditable="true"]:focus {
+            outline: 2px solid #d81b60;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 42;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between">
+
+    <!-- Interactive Falling Petals & Light Effects Canvas -->
+    <canvas id="effectsCanvas"></canvas>
+
+    <!-- TOP HEADER CONTROLS -->
+    <header class="fixed top-4 right-4 z-50 flex items-center gap-3">
+        <button id="musicToggle" class="px-4 py-2 rounded-full glass-card hover:bg-white/90 transition-all duration-300 flex items-center gap-2 text-xs sm:text-sm font-semibold text-pink-700 border border-pink-200 shadow-md active:scale-95">
+            <i id="musicIcon" class="fa-solid fa-music text-pink-500 animate-bounce"></i>
+            <span id="musicText">Bật Nhạc Vườn Hoa</span>
+        </button>
+        <button id="burstPetalsBtn" aria-label="Thả Hoa Hồng" class="px-4 py-2 rounded-full glass-card hover:bg-white/90 transition-all duration-300 flex items-center gap-2 text-xs sm:text-sm font-semibold text-rose-700 border border-rose-200 shadow-md active:scale-95">
+            <i class="fa-solid fa-wand-magic-sparkles text-amber-500"></i>
+            <span class="hidden sm:inline">Thả Hoa Hồng</span>
+        </button>
+    </header>
+
+    <!-- POETIC TOP LEFT CALLIGRAPHY OVERLAY (Matches "Dành bạn, cả một vườn thương.") -->
+    <div class="absolute top-6 left-6 sm:top-10 sm:left-12 z-20 pointer-events-none top-greeting">
+        <p class="poetic-heading text-2xl sm:text-4xl md:text-5xl font-bold tracking-wide italic">
+            Dành tặng bạn, cả một vườn thương.
+        </p>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="relative z-20 max-w-6xl mx-auto px-4 pt-8 pb-20 w-full flex flex-col items-center">
+        
+        <!-- MAIN TITLE -->
+        <div class="text-center mb-8 max-w-3xl hero-copy">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-pink-100/80 text-pink-700 border border-pink-200 text-xs sm:text-sm font-medium mb-3 shadow-sm">
+                🌸 Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸
+            </span>
+           
+        </div>
+
+        <!-- DUAL PHOTO FRAMES & CARDS SECTION -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 my-4">
+            
+            <!-- LADY 1 FRAME CARD -->
+            <div class="glass-card profile-card rounded-3xl p-6 flex flex-col items-center relative transition-all duration-300 hover:shadow-2xl group border border-white/80">
+                <!-- Outer Flower Decorative Top -->
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 text-2xl flex gap-2">
+                    <span>🌹</span><span>🌸</span><span>🌺</span>
+                </div>
+
+                <!-- Circular Photo Frame -->
+                <div class="relative my-4">
+                    <div class="flower-wreath-frame w-48 h-48 sm:w-56 sm:h-56">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-pink-50 relative border-4 border-white flex items-center justify-center">
+                            <img id="preview1" src="1.jpg" alt="Bạn Nữ 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            
+                            <!-- Upload Overlay -->
+                            
+                            <input type="file" id="upload1" accept="image/*" class="hidden" onchange="handleImageUpload(event, 'preview1')">
+                        </div>
+                    </div>
+
+                    <!-- Name Label Ribbon -->
+                    <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white text-xs font-bold px-4 py-1.5 rounded-full border border-white shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-crown text-yellow-300 text-xs"></i>
+                        <span id="nameLabel1" contenteditable="true" >Lê Yến Nhi</span>
+                        <i class="fa-solid fa-pen text-[10px] opacity-70"></i>
+                    </div>
+                </div>
+
+                <!-- Wish Content Box -->
+                <div class="w-full bg-white/70 rounded-2xl p-5 border border-pink-100 text-center mt-3 flex-1 flex flex-col justify-between shadow-sm wish-panel">
+                    <div>
+                        <h3 class="font-poetic text-3xl text-pink-700 font-bold mb-2">Ngát Hương & Xinh Đẹp</h3>
+                        <p id="wishText1" contenteditable="true" class="text-sm text-gray-700 font-light leading-relaxed outline-none">
+                           "Chúc Nhi luôn giữ vững nụ cười tươi tắn, lúc nào cũng an nhiên và hạnh phúc! Mọi may mắn, yêu thương và những điều ngọt ngào nhất sẽ luôn đồng hành cùng bạn trên mọi chặng đường phía trước nhé!"
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- LADY 2 FRAME CARD -->
+            <div class="glass-card profile-card rounded-3xl p-6 flex flex-col items-center relative transition-all duration-300 hover:shadow-2xl group border border-white/80">
+                <!-- Outer Flower Decorative Top -->
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 text-2xl flex gap-2">
+                    <span>🌷</span><span>🌼</span><span>🌻</span>
+                </div>
+
+                <!-- Circular Photo Frame -->
+                <div class="relative my-4">
+                    <div class="flower-wreath-frame w-48 h-48 sm:w-56 sm:h-56">
+                        <div class="w-full h-full rounded-full overflow-hidden bg-sky-50 relative border-4 border-white flex items-center justify-center">
+                            <img id="preview2" src="2.jpg" alt="Bạn Nữ 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            
+                            <!-- Upload Overlay -->
+                          
+                            <input type="file" id="upload2" accept="image/*" class="hidden" onchange="handleImageUpload(event, 'preview2')">
+                        </div>
+                    </div>
+
+                    <!-- Name Label Ribbon -->
+                    <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-sky-500 via-teal-500 to-sky-600 text-white text-xs font-bold px-4 py-1.5 rounded-full border border-white shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-sparkles text-yellow-300 text-xs"></i>
+                        <span id="nameLabel2" contenteditable="true" >Trịnh Tố Nữ</span>
+                        <i class="fa-solid fa-pen text-[10px] opacity-70"></i>
+                    </div>
+                </div>
+
+                <!-- Wish Content Box -->
+                <div class="w-full bg-white/70 rounded-2xl p-5 border border-sky-100 text-center mt-3 flex-1 flex flex-col justify-between shadow-sm wish-panel">
+                    <div>
+                        <h3 class="font-poetic text-3xl text-sky-700 font-bold mb-2">Dịu Dàng & Hạnh Phúc</h3>
+                        <p id="wishText2" contenteditable="true" class="text-sm text-gray-700 font-light leading-relaxed outline-none">
+                            "Chúc Nữ luôn rạng rỡ, xinh đẹp và ngập tràn năng lượng tích cực! Mong rằng mỗi ngày trôi qua với bạn đều là một ngày thật vui vẻ, công việc hay học tập đều suôn sẻ, và sớm đạt được mọi mục tiêu mà bản thân đang ấp ủ nhé!"
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ACTION BUTTON FOR CELEBRATION -->
+        <div class="mt-8 text-center">
+            <button onclick="triggerFlowerStorm()" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 text-white font-bold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 border border-white/60 flex items-center gap-2 mx-auto">
+                <i class="fa-solid fa-heart text-amber-200 animate-pulse"></i>
+                Bung Nở Ngàn Hoa 20/10
+            </button>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-note">
+            <span aria-hidden="true" class="text-2xl text-pink-500">✿</span>
+            <h2 class="font-serifTitle text-2xl sm:text-3xl text-rose-900 mt-2 mb-3">Lời nhắn</h2>
+            <p contenteditable="true" class="outline-none">
+                           Thái anh và Thái Sơn không có gì ngoài tình cảm dành cho 2 bạn tuy không lớn nhưng hy vọng nó làm hai bạn vui .
+                           GỬI CHO TỤI CÁI QR VÀO MESSAGER NHÉ.
+            </p>
+           
+        </div>
+    </footer>
+
+    <!-- POETIC BOTTOM CALLIGRAPHY OVERLAY (Matches "Từ một bông hoa, cả khu vườn đang thức giấc...") -->
+    <div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-30 pointer-events-none text-center w-full px-4 bottom-greeting">
+        <p class="poetic-heading text-xl sm:text-3xl md:text-4xl font-bold tracking-wide italic">
+            Từ hai bông hoa , cả khu vườn đang thức giấc...
+        </p>
+    </div>
+
+    <!-- BACKGROUND MEADOW OF PAPER-STYLE COLORFUL ROSES (Matching TikTok reference exact artwork style) -->
+    <div class="fixed bottom-0 left-0 w-full z-10 pointer-events-none overflow-hidden h-64 sm:h-80 md:h-96 garden-meadow">
+        <svg viewBox="0 0 1200 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover object-bottom">
+            <defs>
+                <!-- Rose Petal Gradients for Paper Layering Effect -->
+                <radialGradient id="pinkRoseGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffb74d"/>
+                    <stop offset="35%" stop-color="#ff4081"/>
+                    <stop offset="100%" stop-color="#f50057"/>
+                </radialGradient>
+                <radialGradient id="blueRoseGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#e0f7fa"/>
+                    <stop offset="40%" stop-color="#4dd0e1"/>
+                    <stop offset="100%" stop-color="#00acc1"/>
+                </radialGradient>
+                <radialGradient id="yellowRoseGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fffde7"/>
+                    <stop offset="45%" stop-color="#ffee58"/>
+                    <stop offset="100%" stop-color="#fdd835"/>
+                </radialGradient>
+                <radialGradient id="orangeRoseGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fff3e0"/>
+                    <stop offset="40%" stop-color="#ff7043"/>
+                    <stop offset="100%" stop-color="#f4511e"/>
+                </radialGradient>
+                <radialGradient id="softPinkGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="50%" stop-color="#f8bbd0"/>
+                    <stop offset="100%" stop-color="#e91e63"/>
+                </radialGradient>
+            </defs>
+
+            <!-- GROUND GRASS BED -->
+            <path d="M0 350 L1200 350 L1200 310 Q 1000 290 800 315 Q 600 330 400 305 Q 200 285 0 310 Z" fill="#a5d6a7" opacity="0.7"/>
+            <path d="M0 350 L1200 350 L1200 325 Q 900 310 600 325 Q 300 340 0 320 Z" fill="#81c784" opacity="0.9"/>
+
+            <!-- BACKGROUND SMALLER STEMS & FLOWERS -->
+            <!-- Background Stem Line Mesh -->
+            <g stroke="#4caf50" stroke-width="3" stroke-linecap="round" opacity="0.8" class="sway-flower-delay">
+                <path d="M100 350 Q 110 240 120 180" />
+                <path d="M220 350 Q 210 230 200 150" />
+                <path d="M340 350 Q 360 250 380 170" />
+                <path d="M480 350 Q 470 230 460 140" />
+                <path d="M680 350 Q 670 240 660 160" />
+                <path d="M820 350 Q 840 230 850 150" />
+                <path d="M960 350 Q 950 220 940 130" />
+                <path d="M1080 350 Q 1100 240 1110 170" />
+            </g>
+
+            <!-- FOREGROUND MAIN TALL STEMS WITH LEAVES (Exact paper rose stems like image) -->
+            <g stroke="#388e3c" stroke-width="5" stroke-linecap="round" class="sway-flower">
+                <!-- Center Giant Pink Rose Stem -->
+                <path d="M600 350 Q 600 200 590 70" stroke-width="7" />
+                <path d="M595 210 Q 560 190 540 200 Q 570 225 595 210 Z" fill="#2e7d32" stroke="none" />
+                <path d="M592 150 Q 630 130 650 145 Q 620 165 592 150 Z" fill="#2e7d32" stroke="none" />
+
+                <!-- Left Blue Rose Stem -->
+                <path d="M300 350 Q 290 220 280 110" stroke-width="6" />
+                <path d="M288 230 Q 250 220 240 235 Q 265 245 288 230 Z" fill="#388e3c" stroke="none" />
+
+                <!-- Right Yellow Rose Stem -->
+                <path d="M890 350 Q 900 210 910 100" stroke-width="6" />
+                <path d="M900 220 Q 930 200 945 215 Q 920 230 900 220 Z" fill="#388e3c" stroke="none" />
+
+                <!-- Left Orange Rose Stem -->
+                <path d="M150 350 Q 160 250 170 130" />
+                <!-- Right Pink Rose Stem -->
+                <path d="M1030 350 Q 1020 240 1010 120" />
+            </g>
+
+            <!-- PAPER STYLE ROSES - LAYERED CIRCLES & SPIRALS (Exact match to video/image art style) -->
+            
+            <!-- 1. CENTER MAIN HUGE PINK PAPER ROSE -->
+            <g transform="translate(590, 70)" class="sway-flower">
+                <circle cx="0" cy="0" r="48" fill="url(#pinkRoseGrad)" />
+                <!-- Spiral Layered Petals -->
+                <circle cx="0" cy="0" r="40" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="20 8" opacity="0.8"/>
+                <circle cx="-3" cy="-3" r="32" fill="none" stroke="#f8bbd0" stroke-width="3" stroke-dasharray="16 6"/>
+                <circle cx="2" cy="2" r="24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="12 5"/>
+                <circle cx="-1" cy="-1" r="16" fill="none" stroke="#f48fb1" stroke-width="2" stroke-dasharray="8 4"/>
+                <circle cx="0" cy="0" r="8" fill="#e91e63" />
+            </g>
+
+            <!-- 2. BLUE PAPER ROSE (LEFT) -->
+            <g transform="translate(280, 110)" class="sway-flower">
+                <circle cx="0" cy="0" r="38" fill="url(#blueRoseGrad)" />
+                <circle cx="0" cy="0" r="30" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="15 6" opacity="0.8"/>
+                <circle cx="-2" cy="-2" r="22" fill="none" stroke="#e0f7fa" stroke-width="2.5" stroke-dasharray="12 5"/>
+                <circle cx="1" cy="1" r="14" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8 4"/>
+                <circle cx="0" cy="0" r="6" fill="#00838f" />
+            </g>
+
+            <!-- 3. YELLOW PAPER ROSE (RIGHT) -->
+            <g transform="translate(910, 100)" class="sway-flower">
+                <circle cx="0" cy="0" r="40" fill="url(#yellowRoseGrad)" />
+                <circle cx="0" cy="0" r="32" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="16 6"/>
+                <circle cx="-2" cy="-2" r="23" fill="none" stroke="#fff9c4" stroke-width="2.5" stroke-dasharray="12 5"/>
+                <circle cx="1" cy="1" r="15" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8 4"/>
+                <circle cx="0" cy="0" r="7" fill="#f57f17" />
+            </g>
+
+            <!-- 4. ORANGE PAPER ROSE (FAR LEFT) -->
+            <g transform="translate(170, 130)" class="sway-flower-delay">
+                <circle cx="0" cy="0" r="35" fill="url(#orangeRoseGrad)" />
+                <circle cx="0" cy="0" r="27" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="14 5"/>
+                <circle cx="-2" cy="-2" r="18" fill="none" stroke="#ffe0b2" stroke-width="2" stroke-dasharray="10 4"/>
+                <circle cx="0" cy="0" r="6" fill="#e65100" />
+            </g>
+
+            <!-- 5. SOFT PINK ROSE (FAR RIGHT) -->
+            <g transform="translate(1010, 120)" class="sway-flower-delay">
+                <circle cx="0" cy="0" r="36" fill="url(#softPinkGrad)" />
+                <circle cx="0" cy="0" r="28" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="14 5"/>
+                <circle cx="-2" cy="-2" r="19" fill="none" stroke="#f8bbd0" stroke-width="2" stroke-dasharray="10 4"/>
+                <circle cx="0" cy="0" r="6" fill="#c2185b" />
+            </g>
+
+            <!-- CLUSTER OF SMALLER PAPER FLOWERS (DENSE MEADOW FILLER) -->
+            <g opacity="0.9" class="sway-flower-delay">
+                <!-- Pink fillers -->
+                <circle cx="70" cy="200" r="22" fill="#ff80ab"/> <circle cx="70" cy="200" r="15" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 4"/>
+                <circle cx="410" cy="190" r="25" fill="#f48fb1"/> <circle cx="410" cy="190" r="17" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="9 4"/>
+                <circle cx="460" cy="140" r="28" fill="url(#pinkRoseGrad)"/> <circle cx="460" cy="140" r="20" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 4"/>
+                <circle cx="660" cy="160" r="26" fill="url(#softPinkGrad)"/> <circle cx="660" cy="160" r="18" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 4"/>
+                <circle cx="770" cy="180" r="24" fill="#ff4081"/> <circle cx="770" cy="180" r="16" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 4"/>
+                <!-- Orange/Yellow fillers -->
+                <circle cx="210" cy="220" r="20" fill="#ffb74d"/> <circle cx="210" cy="220" r="13" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="6 3"/>
+                <circle cx="530" cy="210" r="22" fill="#ffe082"/> <circle cx="530" cy="210" r="14" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="7 3"/>
+                <circle cx="850" cy="150" r="27" fill="url(#orangeRoseGrad)"/> <circle cx="850" cy="150" r="19" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 4"/>
+                <!-- Cyan/Blue fillers -->
+                <circle cx="370" cy="240" r="18" fill="#80deea"/> <circle cx="370" cy="240" r="11" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="6 3"/>
+                <circle cx="1110" cy="170" r="24" fill="url(#blueRoseGrad)"/> <circle cx="1110" cy="170" r="16" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 4"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Tone.js Sound Synthesizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+    <script>
+        /* --- IMAGE UPLOAD & DRAG/DROP HANDLER --- */
+        function handleImageUpload(event, previewId) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.getElementById(previewId);
+                    imgElement.src = e.target.result;
+                    triggerFireworkAtElement(imgElement);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Drag & Drop Setup
+        ['preview1', 'preview2'].forEach((id, idx) => {
+            const img = document.getElementById(id);
+            const parent = img.parentElement;
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                parent.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    parent.classList.add('ring-4', 'ring-pink-400');
+                }, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                parent.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    parent.classList.remove('ring-4', 'ring-pink-400');
+                }, false);
+            });
+
+            parent.addEventListener('drop', (e) => {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                if (files && files[0]) {
+                    const uploadInput = document.getElementById(`upload${idx + 1}`);
+                    uploadInput.files = files;
+                    handleImageUpload({ target: { files: files } }, id);
+                }
+            });
+        });
+
+        /* --- PRESET WISHES GENERATOR --- */
+        const presetWishesLady1 = [
+            "Chúc bạn luôn rực rỡ như những bông hoa hồng nở sớm mai. Mong rằng từng bước đường bạn đi đều tràn ngập nụ cười, niềm vui và sự ngọt ngào!",
+            "Chúc bạn 20/10 ngập tràn niềm vui, xinh đẹp rạng ngời và luôn là đóa hoa tỏa ngát hương thơm độc nhất vô nhị!",
+            "Gửi tới bạn đóa hoa hồng xinh đẹp nhất. Mừng ngày Phụ Nữ Việt Nam tràn đầy yêu thương, hạnh phúc và quà tặng!"
+        ];
+
+        const presetWishesLady2 = [
+            "Cảm ơn bạn vì đã mang đến sự ấm áp và bình yên như vườn hoa thơm mát. Mừng ngày 20/10, chúc bạn luôn xinh tươi, hạnh phúc và gặp thật nhiều may mắn!",
+            "Chúc bạn 20/10 ngọt ngào, dịu dàng và luôn giữ trọn nụ cười rạng rỡ trên môi. Mong mọi điều tốt đẹp nhất sẽ đến với bạn!",
+            "Mừng ngày 20/10! Chúc bạn mãi đáng yêu, thành công trên mọi con đường và luôn nhận được vô vàn tình yêu thương!"
+        ];
+
+        let wishIdx1 = 0;
+        let wishIdx2 = 0;
+
+        function changeRandomWish(elementId, ladyNum) {
+            if (ladyNum === 1) {
+                wishIdx1 = (wishIdx1 + 1) % presetWishesLady1.length;
+                document.getElementById(elementId).innerText = `"${presetWishesLady1[wishIdx1]}"`;
+            } else {
+                wishIdx2 = (wishIdx2 + 1) % presetWishesLady2.length;
+                document.getElementById(elementId).innerText = `"${presetWishesLady2[wishIdx2]}"`;
+            }
+        }
+
+        /* --- CANVAS ANIMATIONS (FALLING PETALS & SPARKLES) --- */
+        const canvas = document.getElementById('effectsCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const petals = [];
+        const sparkles = [];
+        const petalSymbols = ['🌸', '🌹', '🌼', '✨', '💖'];
+
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * -height;
+                this.size = Math.random() * 16 + 12;
+                this.speedY = Math.random() * 1.5 + 0.8;
+                this.speedX = Math.random() * 1.5 - 0.75;
+                this.rotation = Math.random() * 360;
+                this.rotSpeed = (Math.random() - 0.5) * 2;
+                this.symbol = petalSymbols[Math.floor(Math.random() * petalSymbols.length)];
+                this.opacity = Math.random() * 0.7 + 0.3;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y * 0.01) + this.speedX;
+                this.rotation += this.rotSpeed;
+
+                if (this.y > height + 20) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+                ctx.font = `${this.size}px serif`;
+                ctx.fillText(this.symbol, 0, 0);
+                ctx.restore();
+            }
+        }
+
+        class SparkleParticle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.color = ['#ff80ab', '#ffd54f', '#80deea', '#ff4081', '#ffffff'][Math.floor(Math.random() * 5)];
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5 + 1.5;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.alpha = 1;
+                this.decay = Math.random() * 0.02 + 0.015;
+                this.size = Math.random() * 4 + 2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.vy += 0.04;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = Math.max(0, this.alpha);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        // Initialize particles
+        for (let i = 0; i < 45; i++) {
+            petals.push(new Petal());
+        }
+
+        function createSparkles(x, y) {
+            for (let i = 0; i < 35; i++) {
+                sparkles.push(new SparkleParticle(x, y));
+            }
+        }
+
+        function triggerFireworkAtElement(elem) {
+            const rect = elem.getBoundingClientRect();
+            createSparkles(rect.left + rect.width / 2, rect.top + rect.height / 2);
+        }
+
+        function triggerFlowerStorm() {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createSparkles(Math.random() * width, Math.random() * (height * 0.6));
+                }, i * 200);
+            }
+        }
+
+        document.getElementById('burstPetalsBtn').addEventListener('click', triggerFlowerStorm);
+
+        window.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'INPUT' && !e.target.closest('button')) {
+                createSparkles(e.clientX, e.clientY);
+            }
+        });
+
+        // Animation Loop
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            petals.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            for (let i = sparkles.length - 1; i >= 0; i--) {
+                const s = sparkles[i];
+                s.update();
+                s.draw();
+                if (s.alpha <= 0) {
+                    sparkles.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.onload = function() {
+            animate();
+        };
+
+        /* --- TONE.JS MUSIC SYNTHESIZER --- */
+        let isPlaying = false;
+        let polySynth = null;
+        let loop = null;
+
+        function initAudio() {
+            if (!polySynth) {
+                polySynth = new Tone.PolySynth(Tone.Synth, {
+                    oscillator: { type: "triangle" },
+                    envelope: { attack: 0.2, decay: 0.3, sustain: 0.6, release: 1.2 }
+                }).toDestination();
+                polySynth.volume.value = -12;
+
+                const melody = ["C4", "E4", "G4", "C5", "B4", "G4", "A4", "F4", "D4", "G4", "C5"];
+                let idx = 0;
+
+                loop = new Tone.Loop(time => {
+                    const note = melody[idx % melody.length];
+                    polySynth.triggerAttackRelease(note, "8n", time);
+                    idx++;
+                }, "4n");
+            }
+        }
+
+        const musicBtn = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        const musicText = document.getElementById('musicText');
+
+        musicBtn.addEventListener('click', async () => {
+            await Tone.start();
+            initAudio();
+
+            if (!isPlaying) {
+                Tone.Transport.start();
+                loop.start(0);
+                isPlaying = true;
+                musicText.innerText = "Tắt Nhạc Vườn Hoa";
+                musicIcon.classList.remove('fa-music');
+                musicIcon.classList.add('fa-pause');
+            } else {
+                Tone.Transport.stop();
+                isPlaying = false;
+                musicText.innerText = "Bật Nhạc Vườn Hoa";
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-music');
+            }
+        });
+    </script>
+</body>
+</html>
